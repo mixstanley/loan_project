@@ -1,0 +1,27 @@
+一、需求分析（功能点拆解）
+1.数据仓库：
+-- 存储：Supabase
+-- 模型：Dimensional modeling - Star Model
+-- 指标：业务指标若干（口径需要二次确认）
+2.ETL：
+-- 任务：数据清洗、指标计算
+-- 调度：自动化调度、监控
+3.可视化：
+-- Dashboard：Streamlit
+-- 指标：任务监控、业务核心指标
+
+二、方案设计
+1.技术选型：
+-- Python：
+-- SQL：
+-- Supabase:
+-- Unix(Mac) Cron:
+-- Streamlit:
+2.架构设计：
+-- 数据架构
+-- ETL流程
+
+三、开发计划
+1.周二：搭建开发环境 + 数据模型 + ETL任务开发
+2.周三：调度 + 可视化
+3.周四：发布(Github)

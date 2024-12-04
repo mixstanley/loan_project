@@ -1,0 +1,36 @@
+CREATE TABLE dim_hour (
+    hour_id INT PRIMARY KEY,
+    hour_label VARCHAR(20) NOT NULL,
+    is_morning BOOLEAN NOT NULL,
+    is_afternoon BOOLEAN NOT NULL,
+    is_evening BOOLEAN NOT NULL,
+    is_night BOOLEAN NOT NULL
+);
+
+INSERT INTO dim_hour (hour_id, hour_label, is_morning, is_afternoon, is_evening, is_night)
+VALUES
+    (0, '00:00-01:00', FALSE, FALSE, FALSE, TRUE),
+    (1, '01:00-02:00', FALSE, FALSE, FALSE, TRUE),
+    (2, '02:00-03:00', FALSE, FALSE, FALSE, TRUE),
+    (3, '03:00-04:00', FALSE, FALSE, FALSE, TRUE),
+    (4, '04:00-05:00', FALSE, FALSE, FALSE, TRUE),
+    (5, '05:00-06:00', FALSE, FALSE, FALSE, TRUE),
+    (6, '06:00-07:00', TRUE, FALSE, FALSE, FALSE),
+    (7, '07:00-08:00', TRUE, FALSE, FALSE, FALSE),
+    (8, '08:00-09:00', TRUE, FALSE, FALSE, FALSE),
+    (9, '09:00-10:00', TRUE, FALSE, FALSE, FALSE),
+    (10, '10:00-11:00', TRUE, FALSE, FALSE, FALSE),
+    (11, '11:00-12:00', TRUE, FALSE, FALSE, FALSE),
+    (12, '12:00-13:00', FALSE, TRUE, FALSE, FALSE),
+    (13, '13:00-14:00', FALSE, TRUE, FALSE, FALSE),
+    (14, '14:00-15:00', FALSE, TRUE, FALSE, FALSE),
+    (15, '15:00-16:00', FALSE, TRUE, FALSE, FALSE),
+    (16, '16:00-17:00', FALSE, TRUE, FALSE, FALSE),
+    (17, '17:00-18:00', FALSE, TRUE, FALSE, FALSE),
+    (18, '18:00-19:00', FALSE, FALSE, TRUE, FALSE),
+    (19, '19:00-20:00', FALSE, FALSE, TRUE, FALSE),
+    (20, '20:00-21:00', FALSE, FALSE, TRUE, FALSE),
+    (21, '21:00-22:00', FALSE, FALSE, TRUE, FALSE),
+    (22, '22:00-23:00', FALSE, FALSE, TRUE, FALSE),
+    (23, '23:00-00:00', FALSE, FALSE, TRUE, FALSE)
+    ;
