@@ -1,16 +1,17 @@
-一、数据模型
-共开发四层任务：
-1.ods层（贴源层）：对源数据进行必要的清洗，后Load到Supabase数据库中。
-2.dwd层（明细数据层）：构建星型模型，开发事实表和维度表，应对分析查询为主的消费场景。
-3.dws层（轻度汇总层）：对常用、核心指标进行汇总，降低频繁查询的指标的获取成本。
-4.adm层（应用层）：加工复合、衍生指标，直接面向应用，不过度考虑复用性
+1. Data Model
+Four layers of tasks were developed:
+	1.	ODS Layer (Source Layer): Perform necessary cleaning of source data, then load it into the Supabase database.
+	2.	DWD Layer (Detailed Data Layer): Build a star schema by developing fact and dimension tables to support analysis-focused consumption scenarios.
+	3.	DWS Layer (Light Aggregation Layer): Aggregate frequently used and core metrics to reduce the cost of querying these metrics repeatedly.
+	4.	ADM Layer (Application Layer): Process composite and derived metrics directly for application use, without excessive consideration of reusability.
 
-二、ETL pipeline
-1.(Etl)Task：由python封装SQL，实现每个表的ETL。
-2.(Workflow)调度：
-    a.通过shell封装Task，并处理任务执行日志
-    b.通过shell空值任务间的依赖关系
-    c.通过crontab设置任务的调度时间和频次
-3.工具类：提供可抽象的公共对象和方法，以及配置信息等。
+2. ETL Pipeline
+	1.	(ETL) Task: Use Python to wrap SQL to implement the ETL process for each table.
+	2.	(Workflow) Scheduling:
+	•	Use shell scripts to wrap tasks and handle execution logs.
+	•	Define dependencies between tasks via shell scripts.
+	•	Use crontab to set the scheduling time and frequency of tasks.
+	3.	Utility Classes: Provide abstracted common objects, methods, and configuration information.
 
-三.Dashboard：通过Streamlit连接到数据库，通过Python包进行不同形式的报表展示。
+3. Dashboard
+Connect to the database via Streamlit and use Python libraries to display reports in various formats.
